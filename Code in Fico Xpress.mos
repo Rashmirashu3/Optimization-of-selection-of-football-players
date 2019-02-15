@@ -1,0 +1,23 @@
+!@encoding CP1252
+model CoolName
+uses "mmxprs"; !gain access to the Xpress-Optimizer solver
+
+!sample declarations section
+declarations
+	N = 1..100
+	
+	Name: array(N) of string
+	Position: array(N) of string
+	Salary: array(N) of integer
+	ProjectedScore: array(N) of integer
+	
+end-declarations
+
+
+initializations from 'PlayerData.txt'
+	Name
+	Position
+	Salary
+	ProjectedScore
+end-initializations
+end-model
